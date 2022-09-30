@@ -11,6 +11,7 @@
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <!-- Navbar Section -->
 
     <nav class="navbar navbar-expand-sm bg-dark fixed-top navbar-dark">
@@ -43,7 +44,7 @@
       <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-lg-12  hero-text">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text hero-text">
                 <h2 class="hero_title">Kshama Pandey</h2>
                 <p class="hero_desc">A Emerging Web-Designer</p>
             </div>
@@ -52,6 +53,7 @@
     </section>
 
     <!-- About Section -->
+
   <section id=about>
     <div  class="container mt-5"></div>
         <div class="row">
@@ -199,31 +201,38 @@
                     </style>
                   </div>
               </div>
-              <!-- <input type="text" id="getValues" value="My Name is John Smith" /> -->
 
               <div class="col-lg-6">
                   <!-- form fields -->
-                  <form name="myForm" class="pure-form" action="*" onsubmit="return validateForm()" method="post">
+                  <form name="myForm" class="pure-form" action="*" onsubmit="return validateForm()" method="post"  novalidate>
                       <input type="text" id="name" class="form-control form-control-lg" name="name" placeholder="Name">
-                      <input type="email" id="email" class="form-control mt-3" name="email" placeholder="Email">
-                      <span class="error" aria-live="polite"></span>
-                      <input type="text" id="subject" class="form-control mt-3" name="subject" placeholder="Subject">
-                      <div class="mb-3 mt-3">
-                          <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
-                      </div>
-                      <input type="submit" id="submit" value="Contact Me">
-                      <span role="alert" id="nameError" aria-hidden="true">
+                      <span role="alert" id="nameError" aria-hidden="true" >
                         name must be filled out
                       </span>
+                      <input type="email" id="email" class="form-control mt-3" name="email" placeholder="Email"> 
                       <span role="alert" id="emailError" aria-hidden="true">
                         email must be filled out
+                      </span> 
+                      <span role="alert" id="emailError2" aria-hidden="true">
+                        Please input a valid email id
+                      </span> 
+                      <input type="text" id="subject" class="form-control mt-3" name="subject" placeholder="Subject">
+                      <span role="alert" id="subjectError" aria-hidden="true">
+                        Subject must be filled out
                       </span>
-                      
-                  </form>      
+                      <div class="mb-1 mt-3">
+                          <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="Project Details"></textarea>
+                      </div>
+                      <span role="alert" id="commentError" aria-hidden="true">
+                        Please provide some detail
+                      </span><br>
+                      <input type="submit" id="submit" value="Contact Me">
+                   </form> 
+
               </div>
           </div>
       </div>
-  </section>
+</section>
 
    <!-- Footer -->
     <footer id="footer">
