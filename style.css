@@ -36,6 +36,10 @@
     padding-top: 4rem;
 } 
 
+#submit {
+  background-color: greenyellow;
+}
+
 img{
   width: 200px; 
   height: 200px;

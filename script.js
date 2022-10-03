@@ -10,8 +10,8 @@ navLinks.forEach((l) => {
 
 // addEventListner() method execute a function (validate) when a user clicks on the submit 
  const submit = document.getElementById("submit");
- submit.addEventListener("click", validate);
-
+ submit.addEventListener("click", validate) ;
+  
  // Accessing the elements with specific id, and assigning to variables
  const nameField = document.getElementById("name");
  const emailField = document.getElementById("email");
@@ -33,10 +33,12 @@ navLinks.forEach((l) => {
     );
 };
 
+
 // function to show or hide the error based on user input
  function updateValue(e) {
     const errorMsg = document.getElementById(e.target.id+"Error");
     hide_error(e.target, errorMsg)
+   
     if (e.target.id==='email')
       {
         const emailError2 = document.getElementById("emailError2");
@@ -71,6 +73,7 @@ function hide_error(elmField,elmError)
 // function for form validation
 function validate(e) {
   e.preventDefault();
+
   
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
@@ -128,6 +131,11 @@ function validate(e) {
       hide_error(commentField,commentError)
     }
 
+  const inputs = document.querySelectorAll('#name, #email, #subject, #comment');
+
+  inputs.forEach(input => {
+    input.value = '';
+  });
   return valid;
 }
 
